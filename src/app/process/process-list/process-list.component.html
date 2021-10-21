@@ -1,0 +1,23 @@
+<div class="alert alert-danger" *ngIf="errorMessage">
+  <p>{{ errorMessage }}</p>
+</div>
+<div *ngIf="isLoading" style="text-align: center;">
+  <app-loading-spinner class="spinner-style"></app-loading-spinner>
+</div>
+<div class="main-caption">DHS CORE</div>
+<div class="row">
+  <div class="col-xs-12">
+    <a
+      href="#"
+      class="list-group-item clearfix"
+      *ngFor="let process of processes">
+      <div class="pull-left">
+        <h4 class="list-group-item-heading">{{process.name}}</h4>
+        <p class="list-group-item-text">{{process.state}}</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+
